@@ -1,26 +1,41 @@
 import { useState } from "react";
-import ReactFlagsSelect from 'react-flags-select';
+import { Bell, Heart, ShoppingCart, Search } from "lucide-react";
 
-const NAV_LINKS = ["Home", "Shop", "Collections", "About", "Contact"];
+const NAV_LINKS = ["OUR STORY", "HAUTE DOLL", "TOPS", "ACCESSORIES", "FAQ"];
 const COUNTRIES = ["South Africa", "Botswana", "Namibia", "Zimbabwe"];
+const COUNTRY_CODES = {
+  "South Africa": "za",
+  "Botswana": "bw",
+  "Namibia": "na",
+  "Zimbabwe": "zw",
+};
 
 export default function Navbar() {
-    const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState('ZA');
-    
-  
+  const [open, setOpen] = useState(false);
+  const [country, setCountry] = useState(COUNTRIES[0]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-400 bg-white">
       {/* TIER 1 */}
       <div className="mx-auto max-w-7xl px-4">
-        {/* Tablet + Desktop: 3 columns, logo centered */}
-        <div className="hidden items-center py-4 sm:grid sm:grid-cols-[1fr_auto_1fr]">
-          <div className="justify-self-start">
+        {/* Desktop (lg+): 3 columns, logo centered */}
+        <div className="hidden items-center py-4 lg:grid lg:grid-cols-[1fr_auto_1fr]"> {/* 👈 changed */}
+          <div className="justify-self-start flex items-center gap-2">
             <label htmlFor="country" className="sr-only">Select your country</label>
+            <img
+              src={`https://flagcdn.com/w80/${COUNTRY_CODES[country]}.png`}
+              alt={`${country} flag`}
+              className="w-6 h-6 rounded-full object-cover ring-1 ring-gray-300"
+            />
+            <span className="flex items-center text-sm ml-2">
+              <span className="h-10 w-px bg-gray-500 mr-2" /> {/* 👈 the line */}
+              Ship to
+            </span>
             <select
               id="country"
-              className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              className="py-2 text-sm focus:outline-none focus:ring-2"
             >
               {COUNTRIES.map((c) => <option key={c}>{c}</option>)}
             </select>
@@ -30,17 +45,33 @@ export default function Navbar() {
             <img src="/src/assets/hautedoll-logo.png" alt="HAUTE DOLL" />
           </a>
 
-          <div className="justify-self-end">
-            <button className="rounded-md bg-black px-5 py-2 text-sm text-white hover:bg-gray-800">
-              Login
+          <div className="justify-self-end flex items-center gap-4">
+            <button className="text-gray-700 hover:text-black">
+              <Bell className="w-5 h-5" />
+            </button>
+            <button className="text-gray-700 hover:text-black">
+              <Heart className="w-5 h-5" />
+            </button>
+            <button className="text-gray-700 hover:text-black">
+              <ShoppingCart className="w-5 h-5" />
+            </button>
+
+            <div className="h-10 w-px bg-gray-500" />
+
+            <button className="rounded-md border-3 border-black bg-black px-5 py-2 text-sm font-bold text-white hover:bg-white hover:text-black ">
+              Register
+            </button>
+
+            <button className="rounded-md border-3 border-black bg-white px-5 py-2 text-sm font-bold text-black hover:bg-black hover:text-white">
+              Sign in
             </button>
           </div>
         </div>
 
-        {/* Mobile phones only: logo + hamburger */}
-        <div className="flex items-center justify-between py-4 sm:hidden">
+        {/* Phones + tablets (below lg): logo + hamburger */}
+        <div className="flex items-center justify-between py-4 lg:hidden"> {/* 👈 changed */}
           <a href="/" className="w-20 h-full object-cove">
-                        <img src="/src/assets/hautedoll-logo.png" alt="HAUTE DOLL" />
+            <img src="/src/assets/hautedoll-logo.png" alt="HAUTE DOLL" />
           </a>
           <button
             type="button"
@@ -63,32 +94,35 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* TIER 2 (tablet + desktop) */}
-      <div className="hidden border-t sm:block">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 items-center gap-6 px-4 py-3">
-          {/* Left — pages (wraps if tight) */}
+      {/* TIER 2 (desktop only) */}
+      <div className="hidden lg:block"> {/* 👈 changed */}
+        <div className="mx-auto grid max-w-7xl grid-cols-2 items-center gap-6 px-4 pb-3">
           <nav aria-label="Main" className="flex flex-wrap items-center gap-x-6 gap-y-1">
             {NAV_LINKS.map((label) => (
-              <a key={label} href="#" className="text-sm hover:underline">
+              <a key={label} href="#" className="font-heading text-sm text-gray-500 hover:underline">
                 {label}
               </a>
             ))}
           </nav>
 
-          {/* Right — search */}
-          <form role="search" className="w-full max-w-sm justify-self-end">
+          <form role="search" className="flex w-72 max-w-sm items-center justify-self-end">
             <input
               type="search"
               placeholder="Search products…"
-              className="w-full rounded-full border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+              className="min-w-0 flex-1 rounded-lg bg-gray-100 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
             />
+            <button type="submit" aria-label="Search" className="ml-2 text-gray-700 hover:text-black">
+              <Search className="w-5 h-5  text-gray-700" />
+            </button>
           </form>
+
+          
         </div>
       </div>
 
-      {/* MOBILE MENU (phones only) */}
+      {/* MOBILE / TABLET MENU */}
       {open && (
-        <div id="mobile-menu" className="border-t bg-white sm:hidden">
+        <div id="mobile-menu" className="border-t bg-white lg:hidden"> {/* 👈 changed */}
           <nav aria-label="Mobile" className="flex flex-col divide-y px-4">
             {NAV_LINKS.map((label) => (
               <a key={label} href="#" onClick={() => setOpen(false)} className="py-3 text-sm">
