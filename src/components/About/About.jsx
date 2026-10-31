@@ -23,17 +23,17 @@ export default function About() {
             
             {/* Box 1: Mirror Palais */}
             <div className="flex aspect-square w-24 flex-col items-center justify-center border border-gray-200 bg-[#fdfbf7] p-2 text-center shadow-sm">
-              <img src="public/about/mirror-palais.png" alt="Mirror Palais Logo" className="h-full w-full object-contain" />
+              <img src="/about/mirror-palais.png" alt="Mirror Palais Logo" className="h-full w-full object-contain" />
             </div>
 
             {/* Box 2: Miu Miu */}
             <div className="flex aspect-square w-24 items-center justify-center bg-black p-2 shadow-sm">
-              <img src="public/about/miu-miu.png" alt="Miu Miu Logo" className="h-full w-full object-contain" />
+              <img src="/about/miu-miu.png" alt="Miu Miu Logo" className="h-full w-full object-contain" />
             </div>
 
             {/* Box 3: My Mom Made It */}
             <div className="flex aspect-square w-24 items-center justify-center border border-gray-200 bg-white p-2 text-center shadow-sm">
-              <img src="public/about/my-mum-made-it.png" alt="My Mom Made It Logo" className="h-full w-full object-contain" />
+              <img src="/about/my-mum-made-it.png" alt="My Mom Made It Logo" className="h-full w-full object-contain" />
             </div>
 
           </div>
@@ -43,7 +43,7 @@ export default function About() {
         <div className="flex w-full justify-center lg:justify-end">
           <div className="w-full max-w-md overflow-hidden lg:max-w-full">
             <img
-              src="public/about/runway.jpg"
+              src="/about/runway.jpg"
               alt="Model on runway"
               className="h-full w-auto"
             />

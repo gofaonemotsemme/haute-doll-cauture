@@ -10,7 +10,7 @@ export default function Hero() {
         <a href="#" className="block overflow-hidden rounded-lg lg:col-span-12">
           <div className="">
             <img
-              src="public/hero/haute-doll-banner.png"
+              src="/hero/haute-doll-banner.png"
               alt="Hero banner"
               className="h-auto w-full rounded-lg"
             />
@@ -41,14 +41,14 @@ export default function Hero() {
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                 <div className="w-full overflow-hidden rounded-lg bg-gray-200">
                     <img
-                    src="public/hero/women.png"
+                    src="/hero/women.png"
                     alt="Feature A"
                     className="h-auto w-full rounded-lg"
                     />
                 </div>
                 <div className=" w-full overflow-hidden rounded-lg bg-gray-200">
                     <img
-                    src="public/hero/accessories.png"
+                    src="/hero/accessories.png"
                     alt="Feature B"
                     className="h-auto w-full rounded-lg"
                     />
@@ -64,7 +64,7 @@ export default function Hero() {
         className="relative block overflow-hidden rounded-lg lg:col-span-4"
         >
             <img
-                src="public/hero/runway.png"
+                src="/hero/runway.png"
                 alt=""
                 className="h-auto w-full rounded-lg lg:absolute lg:inset-0 lg:h-full lg:object-cover"
             />

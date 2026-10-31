@@ -5,7 +5,7 @@ export default function Story() {
     <div 
       className="relative flex h-[500px] w-full items-center bg-cover bg-center bg-no-repeat px-6 sm:h-[600px] md:px-12 lg:px-20"
       style={{
-        backgroundImage: "url('public/story/story-background.png')",
+        backgroundImage: "url('/story/story-background.png')",
       }}
     >
       <div className="absolute inset-0 bg-black/10"></div>

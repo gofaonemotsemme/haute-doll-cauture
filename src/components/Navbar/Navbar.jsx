@@ -60,7 +60,7 @@ export default function Navbar() {
           </div>
 
           <a href="/" className="font-heading justify-self-center text-2xl tracking-wide">
-            <img src="public/hautedoll-logo.png" alt="HAUTE DOLL" />
+            <img src="/hautedoll-logo.png" alt="HAUTE DOLL" />
           </a>
 
           <div className="justify-self-end flex items-center gap-4">
@@ -89,7 +89,7 @@ export default function Navbar() {
         {/* Phones + tablets (below lg): logo + hamburger */}
         <div className="flex items-center justify-between py-4 lg:hidden"> 
           <a href="/" className="w-20 h-full object-cove">
-            <img src="public/hautedoll-logo.png" alt="HAUTE DOLL" />
+            <img src="/hautedoll-logo.png" alt="HAUTE DOLL" />
           </a>
           <button
             type="button"
