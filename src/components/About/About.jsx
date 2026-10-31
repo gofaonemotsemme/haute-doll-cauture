@@ -9,9 +9,9 @@ export default function About() {
         <div className="flex w-full max-w-xl flex-col items-center text-center lg:items-start lg:text-left">
           
           {/* Heading */}
-          <h2 className="text-4xl font-light uppercase leading-[1.1] tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-[4.5rem]">
+          <h1 className="text-4xl font-light uppercase leading-[1.1] tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-[4.5rem]">
             The Makers <br /> Of The Muse
-          </h2>
+          </h1>
 
           {/* Paragraph */}
           <p className="mt-6 max-w-lg text-sm leading-relaxed text-gray-500 md:text-base">
@@ -43,13 +43,12 @@ export default function About() {
         <div className="flex w-full justify-center lg:justify-end">
           <div className="w-full max-w-md overflow-hidden lg:max-w-full">
             <img
-              src="/src/assets/about/model.jpg"
+              src="/src/assets/about/runway.jpg"
               alt="Model on runway"
-              className="h-auto w-full"
+              className="h-full w-auto"
             />
           </div>
         </div>
-
       </div>
     </section>
   );
