@@ -90,7 +90,7 @@ export default function Footer() {
         {/* ── MIDDLE SECTION: Large Logo Image ── */}
         <div className="my-16 flex w-full justify-center md:my-24">
           <img
-            src="/src/assets/footer/footer-logo.png" 
+            src="public/footer/footer-logo.png" 
             alt="Haute Doll Couture"
             className="h-auto w-full max-w-4xl object-contain"
           />
@@ -105,13 +105,13 @@ export default function Footer() {
             <div className="flex items-center gap-2 ">
               <div className="flex items-center gap-2 "></div>
               <a href="#" className="flex h-5 w-5 items-center justify-center rounded-sm text-white transition-colors hover:bg-gray-700">
-                <img src="/src/assets/footer/facebook.png" alt="facebook" />
+                <img src="public/footer/facebook.png" alt="facebook" />
               </a>
               <a href="#" className="flex h-5 w-5 items-center justify-center rounded-sm text-white transition-colors hover:bg-gray-700">
-                <img src="/src/assets/footer/tiktok.png" alt="tiktok" />
+                <img src="public/footer/tiktok.png" alt="tiktok" />
               </a>
               <a href="#" className="flex h-5 w-5 items-center justify-center rounded-sm text-white transition-colors hover:bg-gray-700">
-                <img src="/src/assets/footer/instagram.png" alt="instagram" />
+                <img src="public/footer/instagram.png" alt="instagram" />
               </a>
             </div>
             

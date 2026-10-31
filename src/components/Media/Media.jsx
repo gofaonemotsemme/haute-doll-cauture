@@ -11,7 +11,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic1.jpg" 
+              src="public/media/pic1.jpg" 
               alt="Media 1"
               className="h-full w-full object-cover"
             />
@@ -21,7 +21,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic2.jpg"
+              src="public/media/pic2.jpg"
               alt="Media 2"
               className="h-full w-full object-cover"
             />
@@ -31,7 +31,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic3.png"
+              src="public/media/pic3.png"
               alt="Media 3"
               className="h-full w-full object-cover"
             />
@@ -41,7 +41,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic4.jpg" 
+              src="public/media/pic4.jpg" 
               alt="Media 4"
               className="h-full w-full object-cover"
             />
@@ -54,7 +54,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic5.jpg" 
+              src="public/media/pic5.jpg" 
               alt="Media 5"
               className="h-full w-full object-cover"
             />
@@ -64,7 +64,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic6.jpg" 
+              src="public/media/pic6.jpg" 
               alt="Media 6"
               className="h-full w-full object-cover"
             />
@@ -74,7 +74,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic7.jpg"
+              src="public/media/pic7.jpg"
               alt="Media 7"
               className="h-full w-full object-cover"
             />
@@ -84,7 +84,7 @@ export default function Media() {
         <div className="lg:col-span-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
             <img
-              src="/src/assets/media/pic8.jpg"
+              src="public/media/pic8.jpg"
               alt="Media 8"
               className="h-full w-full object-cover"
             />
