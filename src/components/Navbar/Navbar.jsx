@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Bell, Heart, ShoppingCart, Search } from "lucide-react";
 
 const NAV_LINKS = ["OUR STORY", "HAUTE DOLL", "TOPS", "ACCESSORIES", "FAQ"];
+const MOBILE_NAV_LINKS = ["OUR STORY", "HAUTE DOLL", "TOPS", "ACCESSORIES", "FAQ", "NOTIFICATIONS", "WISHLIST", "CART"];
 const COUNTRIES = ["South Africa", "Botswana", "Namibia", "Zimbabwe"];
 const COUNTRY_CODES = {
   "South Africa": "za",
@@ -19,7 +20,7 @@ export default function Navbar() {
       {/* TIER 1 */}
       <div className="mx-auto max-w-7xl px-4">
         {/* Desktop (lg+): 3 columns, logo centered */}
-        <div className="hidden items-center py-4 lg:grid lg:grid-cols-[1fr_auto_1fr]"> {/* 👈 changed */}
+        <div className="hidden items-center py-4 lg:grid lg:grid-cols-[1fr_auto_1fr]">
           <div className="justify-self-start flex items-center gap-2">
             <label htmlFor="country" className="sr-only">Select your country</label>
             <img
@@ -28,7 +29,7 @@ export default function Navbar() {
               className="w-6 h-6 rounded-full object-cover ring-1 ring-gray-300"
             />
             <span className="flex items-center text-sm ml-2">
-              <span className="h-10 w-px bg-gray-500 mr-2" /> {/* 👈 the line */}
+              <span className="h-10 w-px bg-gray-500 mr-2" /> 
               Ship to
             </span>
             <select
@@ -63,13 +64,13 @@ export default function Navbar() {
             </button>
 
             <button className="rounded-md border-3 border-black bg-white px-5 py-2 text-sm font-bold text-black hover:bg-black hover:text-white">
-              Sign in
+              Sign In
             </button>
           </div>
         </div>
 
         {/* Phones + tablets (below lg): logo + hamburger */}
-        <div className="flex items-center justify-between py-4 lg:hidden"> {/* 👈 changed */}
+        <div className="flex items-center justify-between py-4 lg:hidden"> 
           <a href="/" className="w-20 h-full object-cove">
             <img src="/src/assets/hautedoll-logo.png" alt="HAUTE DOLL" />
           </a>
@@ -95,7 +96,7 @@ export default function Navbar() {
       </div>
 
       {/* TIER 2 (desktop only) */}
-      <div className="hidden lg:block"> {/* 👈 changed */}
+      <div className="hidden lg:block">
         <div className="mx-auto grid max-w-7xl grid-cols-2 items-center gap-6 px-4 pb-3">
           <nav aria-label="Main" className="flex flex-wrap items-center gap-x-6 gap-y-1">
             {NAV_LINKS.map((label) => (
@@ -124,7 +125,7 @@ export default function Navbar() {
       {open && (
         <div id="mobile-menu" className="border-t bg-white lg:hidden"> {/* 👈 changed */}
           <nav aria-label="Mobile" className="flex flex-col divide-y px-4">
-            {NAV_LINKS.map((label) => (
+            {MOBILE_NAV_LINKS.map((label) => (
               <a key={label} href="#" onClick={() => setOpen(false)} className="py-3 text-sm">
                 {label}
               </a>
@@ -135,7 +136,8 @@ export default function Navbar() {
             <select className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm">
               {COUNTRIES.map((c) => <option key={c}>{c}</option>)}
             </select>
-            <button className="w-full rounded-md bg-black px-5 py-2 text-sm text-white">Login</button>
+            <button className="w-full rounded-md border-3 border-black bg-black px-5 py-2 text-sm font-bold text-white hover:bg-white hover:text-black ">Register</button>
+            <button className="w-full rounded-md border-3 border-black bg-white px-5 py-2 text-sm font-bold text-black hover:bg-black hover:text-white">Sign In</button>
           </div>
 
           <form role="search" className="border-t px-4 py-4">
