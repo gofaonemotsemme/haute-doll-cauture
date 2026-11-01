@@ -16,25 +16,29 @@ export default function Connect() {
 
       <h2 className="mt-4 text-4xl font-black uppercase leading-[1.1] tracking-tight text-black sm:text-5xl md:text-6xl font-heading">
         Stay Connected with Haute Doll
+    
+        
       </h2>
 
       <p className="mt-4 max-w-150 text-base leading-relaxed text-gray-500">
         Join our community across all platforms to stay updated on the latest
         finds, styling tips, and exclusive collections.
+        \connect\facebook.png
       </p>
 
       <div className="mt-8 flex items-center justify-center gap-3 sm:gap-4">
 
         <a href="/" className="h-5.5 w-5.5 fill-current justify-self-center text-2xl tracking-wide">
-          <img src="/src/assets/connect/facebook.png" alt="facebook" />
+          <img src="/connect/facebook.png" alt="facebook" />
         </a>
 
         <a href="/" className="h-5.5 w-5.5 fill-current justify-self-center text-2xl tracking-wide">
-          <img src="/src/assets/connect/instagram.png" alt="instagram" />
+          <img src="/connect/instagram.png" alt="instagram" />
         </a>
 
         <a href="/" className="h-5.5 w-5.5 fill-current justify-self-center text-2xl tracking-wide">
-          <img src="/src/assets/connect/tiktok.png" alt="tiktok" />
+          <img src="/connect/tiktok.png" alt="tiktok" />
+          
         </a>
       </div>
     </section>

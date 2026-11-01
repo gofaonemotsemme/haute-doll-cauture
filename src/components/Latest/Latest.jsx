@@ -1,21 +1,21 @@
 const NEWS_POSTS = [
   {
     id: 1,
-    image: "src/assets/latest/digital-drift.jpg",
+    image: "/latest/digital-drift.jpg",
     date: "08.09.26",
     title: "Digital Drift",
     description: "Your real-time pulse on street style, subculture aesthetics, and the fast-moving world of 'core' fashion. From thrift finds to the latest drops, we define the next era of self-expression.",
   },
   {
     id: 2,
-    image: "src/assets/latest/edited-silhouette.jpg",
+    image: "/latest/edited-silhouette.jpg",
     date: "15.02.26",
     title: "The Edited Silhouette",
     description: "Curating a timeless wardrobe through the lens of modern minimalism. We explore the intersection of architectural design and everyday wear, focusing on quality over trends.",
   },
   {
     id: 3,
-    image: "src/assets/latest/woven-roots.jpg",
+    image: "/latest/woven-roots.jpg",
     date: "27.01.26",
     title: "Woven Roots",
     description: "Fashion that feels good for the soul and the planet. Join us as we spotlight ethical artisans, slow-fashion movements, and the future of circular textiles.",

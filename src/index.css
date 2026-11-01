@@ -3,13 +3,13 @@
 
 @font-face {
   font-family: 'BalooBhai';
-  src: url('../src/assets/fonts/BalooBhai-Regular.ttf') format('truetype');
+  src: url('/fonts/BalooBhai-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-@theme {
+@theme default {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "BalooBhai", ui-sans-serif, system-ui, sans-serif;
   --animate-marquee: marquee 25s linear infinite;

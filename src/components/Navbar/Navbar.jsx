@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Bell, Heart, ShoppingCart, Search } from "lucide-react";
 
 const NAV_LINKS = ["OUR STORY", "HAUTE DOLL", "TOPS", "ACCESSORIES", "FAQ"];
@@ -14,9 +14,26 @@ const COUNTRY_CODES = {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [country, setCountry] = useState(COUNTRIES[0]);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > lastY && y > 80) setHidden(true);
+      else if (y < lastY) setHidden(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-400 bg-white">
+    <header
+      className={`sticky top-0 z-50 w-full border-b border-gray-400 bg-white transition-transform duration-300 ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       {/* TIER 1 */}
       <div className="mx-auto max-w-7xl px-4">
         {/* Desktop (lg+): 3 columns, logo centered */}
@@ -43,7 +60,7 @@ export default function Navbar() {
           </div>
 
           <a href="/" className="font-heading justify-self-center text-2xl tracking-wide">
-            <img src="/src/assets/hautedoll-logo.png" alt="HAUTE DOLL" />
+            <img src="/hautedoll-logo.png" alt="HAUTE DOLL" />
           </a>
 
           <div className="justify-self-end flex items-center gap-4">
@@ -72,7 +89,7 @@ export default function Navbar() {
         {/* Phones + tablets (below lg): logo + hamburger */}
         <div className="flex items-center justify-between py-4 lg:hidden"> 
           <a href="/" className="w-20 h-full object-cove">
-            <img src="/src/assets/hautedoll-logo.png" alt="HAUTE DOLL" />
+            <img src="/hautedoll-logo.png" alt="HAUTE DOLL" />
           </a>
           <button
             type="button"
@@ -123,7 +140,7 @@ export default function Navbar() {
 
       {/* MOBILE / TABLET MENU */}
       {open && (
-        <div id="mobile-menu" className="border-t bg-white lg:hidden"> {/* 👈 changed */}
+        <div id="mobile-menu" className="border-t bg-white lg:hidden">
           <nav aria-label="Mobile" className="flex flex-col divide-y px-4">
             {MOBILE_NAV_LINKS.map((label) => (
               <a key={label} href="#" onClick={() => setOpen(false)} className="py-3 text-sm">
