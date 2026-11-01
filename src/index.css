@@ -9,7 +9,7 @@
   font-display: swap;
 }
 
-@theme {
+@theme default {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "BalooBhai", ui-sans-serif, system-ui, sans-serif;
   --animate-marquee: marquee 25s linear infinite;
