@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-   base: '/haute-doll-cauture',
+   base: '/haute-doll-cauture/',
   
   build: {
     rollupOptions: {
